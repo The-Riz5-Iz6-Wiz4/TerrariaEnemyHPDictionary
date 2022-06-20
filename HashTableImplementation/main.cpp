@@ -133,7 +133,8 @@ do {
     cout << "7: end program" << endl;
 
     cin >> choice;
-    cin.ignore();
+    cin.ignore(); //cin.ignore is needed so getline ignores the enter_key that was pressed in cin >> choice. 
+                  //getline is used below
 
     cout << endl;
 
