@@ -11,7 +11,7 @@ class hashADT
 {
     private:
 
-        static const int hashTableSize = 139;
+        static const int hashTableSize = 1019;
 
         struct enemy 
         {
@@ -32,7 +32,7 @@ class hashADT
         void printItemsAtIndex(int index);
         void searchEnemyHP(string enemyName);
         void deleteItem(string enemyName);
-        void updateEnemyHP(string enemyName, int maxHealthPoints);
+        void updateEnemyHP(string enemyName,int maxHealthPoints);
 };
 
 #endif

@@ -1,7 +1,10 @@
 #include <cstdlib>
 #include <iostream>
 #include <string>
+#include <ctime>
 #include <chrono>
+
+#include <random>
 
 #include "hash.h"
 
@@ -120,6 +123,22 @@ TerrariaEnemyHPDictionary.insertItem("eyezor", 1000);
 TerrariaEnemyHPDictionary.insertItem("reaper", 700);
 TerrariaEnemyHPDictionary.insertItem("vampire", 750);
 
+//random string generator to populate the dataset for testing
+for (int i = 0; i < 900; i++)
+{
+    int length = (rand()%20) + 2;
+
+    const string alphabet = ("abcdefghijklmnopqrstuvwxyz");
+    string result;
+    result.resize(length);
+
+    for (int i=0; i < length; i++)
+    {
+        result[i] = alphabet[rand() % alphabet.length()];
+    }
+    
+    TerrariaEnemyHPDictionary.insertItem(result, 1);
+}
 
 do {
 

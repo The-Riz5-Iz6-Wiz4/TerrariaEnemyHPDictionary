@@ -1,6 +1,7 @@
 #include <cstdlib>
 #include <iostream>
 #include <string>
+#include <random>
 
 #include "hash.h"
 
@@ -32,7 +33,7 @@ int hashADT::HashFunction(string key)
     int hashSum = 0;
     int index;
 
-    for (int i = 0; i < key.length(); i++)
+    for (int i = 0; i < key.length()/2; i++)
     {
         hashSum = hashSum + (int)key[i];
     }
